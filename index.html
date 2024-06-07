@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" charset="UTF-8">
+        <link rel="stylesheet" href="index.css">
+        
+        <title>Traffic signs Classification</title>
+    </head>
+    <body>
+        
+            <h1>Traffic signs Classification</h1>
+            <!-- <form action="./model.pkl"> -->
+            <form action="{{ url_for('predict')}}"method="post"></form>
+            <canvas id= "canv1" ></canvas>
+            <br>
+            <p>
+            <input type="file" multiple="false" accept="image/*" id="finput" onchange="upload(event)">
+            </p>
+            <button type="submit" name="submit" class="button">Classify</button>
+            </form>
+            <script src="./index.js"> </script>
+            
+            <br>
+            <b>{{prediction_text}}</b>
+    
+    </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+<script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js">
+</script>
+<h1>Upload and Display Image</h1>
+<canvas id= "canv1" ></canvas>
+
+<p>
+Filename:
+<input type="file" multiple="false" accept="image/*" id=finput onchange="upload()">
+</p>
+</body> -->
